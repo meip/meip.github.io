@@ -1,0 +1,121 @@
+.post-head {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.post {
+  padding: 1.8em 2.8em;
+  margin: 0 0  33px;
+  @include shadow(hsl(0, 0%, 100%));
+}
+
+.archive-post {
+  font-size: 12px;
+  margin: 0 0 13px;
+  padding: 14px 25px;
+  @include shadow(hsl(0, 0%, 100%));
+}
+
+.post-title {
+  margin: 0;
+  font-size: 2.1em;
+}
+
+.post-date {
+  margin: .2em 0;
+  font-size: 1.4em;
+  color: $lightTextColor;
+}
+
+.post-body {
+  margin-bottom: 1.2em;
+  line-height: 1.65em;
+  font-size: 1em;
+
+  a {
+    color: $blueGrey;
+  }
+
+  .anchor {
+    text-decoration: none;
+    position: absolute;
+    margin-left: -1.7em;
+    padding-left: 1.7em;
+    outline: none;
+    color: $baseTextColor;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h1, h2, h3,
+  h4, h5, h6 {
+    &:hover .header-link {
+      visibility: visible;
+    }
+  }
+}
+
+.header-link {
+  @extend .icon-link;
+  margin-left: -1.7em;
+  font-size: .65em;
+  visibility: hidden;
+}
+
+.social {
+  padding: .55em 0 1.4em;
+}
+
+.comments {
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 1.2em;
+
+  a {
+    color: $lightTextColor;
+
+    &:hover {
+      text-decoration: none;
+      color: $linkColor;
+    }
+  }
+
+  .icon-bubbles {
+    padding: 3px 15px 5px 0;
+    float: left;
+  }
+}
+
+p code {
+  background: hsl(240, 100%, 96%);
+  border: 1px solid hsl(0, 0%, 90%);
+  padding: 0 0.23em;
+  @include border-radius(3px);
+}
+
+code {
+  margin: 0;
+  padding: 0;
+  font-size: .8em;
+  line-height: 1.5em;
+  font-family: $codeFont;
+}
+
+pre {
+  font-family: $codeFont;
+  overflow: auto;
+  margin-top: 0em;
+  margin-bottom: -1.5em;
+}
+
+.highlight {
+  @include border-radius(3px);
+
+  pre {
+    padding: 15px;
+    margin-bottom: 0;
+  }
+}

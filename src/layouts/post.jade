@@ -1,0 +1,12 @@
+extends base
+
+block title
+  title= post.title
+
+block nav
+  mixin nav()
+
+block content
+  .post
+    mixin post(post)
+    include _social
