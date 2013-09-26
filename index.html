@@ -17,6 +17,60 @@
     </ul>
     <div class="content">
       <div class="post">
+        <div class="post-head group"><a href="/posts/c11-auf-os-x/">
+            <h1 class="post-title">C++11 auf OS X</h1></a>
+          <h2 class="post-date">Published&nbsp<abbr title="2013-09-24T22:00:00.000Z" class="timeago"></abbr></h2>
+        </div>
+        <div class="post-body"><h2><a name="in-terminal"class="anchor" href="#in-terminal"><span class="header-link"></span></a>In Terminal</h2>
+<h3><a name="install-gcc4-7"class="anchor" href="#install-gcc4-7"><span class="header-link"></span></a>Install gcc4.7</h3>
+<pre><code class="lang-bash"><div class="highlight"><pre>brew tap SynthiNet/synthinet
+brew install gcc47
+ln -s /usr/local/bin/gcc-4.7 /usr/local/bin/gcc
+ln -s /usr/local/bin/g++-4.7 /usr/local/bin/g++
+</pre></div>
+</code></pre>
+<h3><a name="f-ge-usr-local-bin-dem-path-hinzu"class="anchor" href="#f-ge-usr-local-bin-dem-path-hinzu"><span class="header-link"></span></a>Füge /usr/local/bin/ dem $PATH hinzu</h3>
+<pre><code class="lang-bash"><div class="highlight"><pre>nano ~/.profile
+</pre></div>
+</code></pre>
+<pre><code class="lang-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/bin/:<span class="nv">$PATH</span>
+</pre></div>
+</code></pre>
+<h3><a name="lade-path-bei-eclipse-start"class="anchor" href="#lade-path-bei-eclipse-start"><span class="header-link"></span></a>Lade PATH bei Eclipse Start</h3>
+<pre><code class="lang-bash"><div class="highlight"><pre>nano /Applications/eclipse-cdt/Eclipse.app/Contents/MacOS/eclipse.sh
+</pre></div>
+</code></pre>
+<pre><code class="lang-bash"><div class="highlight"><pre><span class="c">#!/bin/sh</span>
+. ~/.profile
+logger <span class="s2">&quot;`dirname \&quot;$0\&quot;`/eclipse&quot;</span>
+<span class="nb">exec</span> <span class="s2">&quot;`dirname \&quot;$0\&quot;`/eclipse&quot;</span> <span class="nv">$@</span>
+</pre></div>
+</code></pre>
+<h3><a name="executables-right-f-r-tishell-script"class="anchor" href="#executables-right-f-r-tishell-script"><span class="header-link"></span></a>Executables Right für tiShell-Script</h3>
+<pre><code class="lang-bash"><div class="highlight"><pre>chmod +x /Applications/eclipse-cdt/Eclipse.app/Contents/MacOS/eclipse.sh
+</pre></div>
+</code></pre>
+<h3><a name="change-executable-file-to-eclipse-sh-"class="anchor" href="#change-executable-file-to-eclipse-sh-"><span class="header-link"></span></a>Change &quot;Executable file&quot; to <code>eclipse.sh</code></h3>
+<pre><code class="lang-bash"><div class="highlight"><pre>open /Applications/eclipse-cdt/Eclipse.app/Contents/Info.plist
+</pre></div>
+</code></pre>
+<h3><a name="regristriere-neuen-os-x-launcher-beim-system"class="anchor" href="#regristriere-neuen-os-x-launcher-beim-system"><span class="header-link"></span></a>Regristriere neuen OS X Launcher beim System</h3>
+<pre><code class="lang-bash"><div class="highlight"><pre>/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -v -f /Applications/eclipse-cdt/Eclipse.app
+</pre></div>
+</code></pre>
+<h2><a name="in-eclipse-"class="anchor" href="#in-eclipse-"><span class="header-link"></span></a>In Eclipse:</h2>
+<p>Project Settings -&gt; C/C++ Build -&gt; Settings 
+  -&gt; GCC C++ Compiler -&gt; Micellaneous: -std=c++11</p>
+<h2><a name="links"class="anchor" href="#links"><span class="header-link"></span></a>Links</h2>
+<ul>
+<li><a href="http://astrognomical.wordpress.com/2013/04/25/using-eclipse-cdt-with-gcc-4-8-and-c11-osx-10-8/">http://astrognomical.wordpress.com/2013/04/25/using-eclipse-cdt-with-gcc-4-8-and-c11-osx-10-8/</a></li>
+<li><a href="http://scrupulousabstractions.tumblr.com/post/36441490955/eclipse-mingw-builds">http://scrupulousabstractions.tumblr.com/post/36441490955/eclipse-mingw-builds</a></li>
+<li><a href="http://onedayitwillmake.com/blog/2012/03/c11-in-eclipse-cdt-part-1-getting-and-installing-gcc4-7/">http://onedayitwillmake.com/blog/2012/03/c11-in-eclipse-cdt-part-1-getting-and-installing-gcc4-7/</a></li>
+</ul>
+</div>
+        <div class="comments"><a href="/posts/c11-auf-os-x/#comments"><span class="icon-bubbles"></span>Comments</a></div>
+      </div>
+      <div class="post">
         <div class="post-head group"><a href="/posts/blok-theme/">
             <h1 class="post-title">Blok Theme</h1></a>
           <h2 class="post-date">Published&nbsp<abbr title="2013-07-01T22:00:00.000Z" class="timeago"></abbr></h2>
@@ -85,50 +139,6 @@
 <p>Link into specific sections of your posts.</p>
 </div>
         <div class="comments"><a href="/posts/blok-theme/#comments"><span class="icon-bubbles"></span>Comments</a></div>
-      </div>
-      <div class="post">
-        <div class="post-head group"><a href="/posts/my-second-cool-blog-post/">
-            <h1 class="post-title">My second cool blog post</h1></a>
-          <h2 class="post-date">Published&nbsp<abbr title="2013-06-07T22:00:00.000Z" class="timeago"></abbr></h2>
-        </div>
-        <div class="post-body"><p>Some <a href="http://cupcakeipsum.com">Cupake Ipsum</a> to brighten your day!</p>
-<p>Wafer donut jelly-o chocolate bar apple pie sesame snaps jelly beans cupcake.
-Tart candy canes ice cream croissant ice cream jelly-o caramels pastry apple
-pie. Marshmallow marzipan caramels muffin chupa chups faworki chocolate cake
-tootsie roll. <code>Apple pie sugar plum gummi bears candy icing</code> sweet roll chocolate
-bar. Tiramisu jelly dragée tiramisu applicake. Tootsie roll chocolate cake cake
-apple pie cake tiramisu. Applicake chupa chups ice cream candy. Bear claw
-dessert brownie candy canes lemon drops icing. Wypas cotton candy faworki wypas
-tart ice cream ice cream.</p>
-<pre><code class="lang-javascript"><div class="highlight"><pre><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;yay cupcakes&#39;</span><span class="p">);</span>
-</pre></div>
-</code></pre>
-<p>Macaroon halvah tootsie roll cupcake. Chocolate marzipan pie fruitcake
-lollipop. Dessert jelly-o pastry cotton candy. Caramels lemon drops croissant
-gummi bears cupcake macaroon oat cake chocolate bar. Sweet apple pie sweet roll
-cheesecake tiramisu pie chocolate cookie. Wafer pastry gummi bears pudding
-halvah muffin pie. Candy dragée topping. <code>Pastry gingerbread</code> muffin. Cheesecake
-dessert candy canes jelly beans apple pie lollipop candy canes dragée donut.</p>
-<h3><a name="a-place-kitten-http-placekitten-com-for-good-measure-"class="anchor" href="#a-place-kitten-http-placekitten-com-for-good-measure-"><span class="header-link"></span></a>A <a href="http://placekitten.com/">Place Kitten</a> for good measure!</h3>
-<p><img src="http://placekitten.com/650/300" alt="Place kitten"></p>
-<h3><a name="cotton-candy-bonbon-biscuit"class="anchor" href="#cotton-candy-bonbon-biscuit"><span class="header-link"></span></a>Cotton candy bonbon biscuit</h3>
-<p>Sweet cupcake cake marshmallow muffin cotton candy carrot cake cookie lollipop.
-Carrot cake toffee marzipan wypas lemon drops halvah. Cake jelly sweet roll
-candy jelly beans cake marzipan bear claw applicake. Applicake bonbon chocolate
-halvah gummies gummi bears candy canes tootsie roll jujubes. Cookie donut sweet
-muffin cotton candy carrot cake cookie. Gingerbread bonbon sweet roll chocolate
-fruitcake. Cookie cupcake danish sugar plum chocolate cake.</p>
-<p>Brownie croissant halvah caramels icing. Gummi
-bears chupa chups chocolate. Bear claw dessert donut faworki. Gingerbread candy
-applicake toffee icing halvah. Croissant carrot cake carrot cake cupcake candy.</p>
-<h3><a name="pudding-oat-_cake_-marshmallow-icing"class="anchor" href="#pudding-oat-_cake_-marshmallow-icing"><span class="header-link"></span></a>Pudding oat <em>cake</em> marshmallow icing</h3>
-<p>Wafer icing pudding danish chupa chups. Croissant chocolate bar bear claw
-danish. Macaroon cheesecake sweet. Chocolate sesame snaps lollipop candy toffee
-gingerbread gummies cotton candy. Muffin cheesecake danish wypas bonbon dragée
-caramels. Brownie jujubes cookie. Bear claw faworki faworki pie. Dragée
-lollipop pudding oat cake cake bonbon.</p>
-</div>
-        <div class="comments"><a href="/posts/my-second-cool-blog-post/#comments"><span class="icon-bubbles"></span>Comments</a></div>
       </div>
       <div class="pagination group"><a href="/page/1/" class="older">&#8592; Older</a>
       </div>
