@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/cabin.png">
+    <link href="/styles/main.css" rel="stylesheet">
+    <title>HSR Java Skeletons</title>
+  </head>
+  <body>
+    <ul class="nav group">
+      <li class="icon-menu menu"></li>
+      <li class="nav-link red"><a href="/" class="name">My Name</a></li>
+      <li class="nav-link blue"><a href="/about.html">about</a></li>
+      <li class="nav-link orange"><a href="/projects.html">projects</a></li>
+      <li class="nav-link green"><a href="/archives.html">archives</a></li>
+    </ul>
+    <div class="content">
+      <div class="post">
+        <div class="post-head group"><a href="/posts/hsr-java-skeletons/">
+            <h1 class="post-title">HSR Java Skeletons</h1></a>
+          <h2 class="post-date">Published&nbsp<abbr title="2013-09-25T22:00:00.000Z" class="timeago"></abbr></h2>
+        </div>
+        <div class="post-body"><h2><a name="links-zu-skeletons"class="anchor" href="#links-zu-skeletons"><span class="header-link"></span></a>Links zu Skeletons</h2>
+<ul>
+<li><a href="https://github.com/meip/hsr-uint-skeleton">UInt1</a></li>
+<li><a href="https://github.com/meip/hsr-intte-skeleton">IntTe1</a><h2><a name="generelle-nutzung"class="anchor" href="#generelle-nutzung"><span class="header-link"></span></a>Generelle Nutzung</h2>
+<pre><code class="lang-bash"><div class="highlight"><pre>git clone https://github.com/meip/hsr-uint-skeleton.git
+git checkout -b my_uebung
+</pre></div>
+</code></pre>
+<h3><a name="neues-repository-auf-github-com-erstellen"class="anchor" href="#neues-repository-auf-github-com-erstellen"><span class="header-link"></span></a>Neues Repository auf github.com erstellen</h3>
+<pre><code class="lang-bash"><div class="highlight"><pre>git remote add my_repo git://github.com/you/repo.git
+git push my_repo my_uebung:master
+</pre></div>
+</code></pre>
+</li>
+</ul>
+</div>
+        <!-- Social sharing icons-->
+        <div class="social"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+          <div data-size="medium" data-annotation="bubble" data-width="300" class="g-plusone"></div><a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+        </div>
+        <!-- Disqus comments, Make sure to replace `colinwren` with your account name in-->
+        <!-- the Disqus helper script below-->
+        <div id="comments">
+          <div id="disqus_thread"></div>
+        </div>
+        <!-- Helper scripts for social share icons-->
+        <!-- Hacker News-->
+        <script>
+          (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.src = '//hnbutton.appspot.com/static/hn.min.js';
+            s.parentNode.insertBefore(g, s);
+          }(document, 'script'));
+          
+        </script>
+        <!-- Twitter-->
+        <script>
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          
+        </script>
+        <!-- Google plus-->
+        <script>
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+          
+        </script>
+        <!-- Disqus-->
+        <script>
+          var disqus_shortname = 'colinwren'; // Change this to your Disqus account name
+          
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+      </div>
+    </div><a href="http://cabinjs.com"><img src="/images/cabin.png" class="cabin"></a>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.1.0/jquery.timeago.min.js" type="text/javascript"></script>
+    <script src="/scripts/main.js" type="text/javascript"></script>
+    <script>// Add your analytics code here</script>
+  </body>
+</html>
